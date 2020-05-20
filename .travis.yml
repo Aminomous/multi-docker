@@ -11,9 +11,9 @@ script:
 
 after_success:
   - docker build -t poyori007/multi-client ./client
-  - docker built -t poyori007/multi-nginx ./nginx
-  - docker built -t poyori007/multi-server ./server
-  - docker built -t poyori007/multi-worker ./worker
+  - docker build -t poyori007/multi-nginx ./nginx
+  - docker build -t poyori007/multi-server ./server
+  - docker build -t poyori007/multi-worker ./worker
 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
