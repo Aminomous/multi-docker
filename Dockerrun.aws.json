@@ -25,7 +25,7 @@
         {
             "name": "server",
             "image": "poyori007/multi-server",
-            "hostname": "server",
+            "hostname": "api",
             "essential": false,
             "memory": 128
         },
