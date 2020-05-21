@@ -26,8 +26,8 @@ deploy:
   edge: true
   provider: elasticbeanstalk
   region: us-east-2
-  app: multi-docker
-  env: MultiDocker-env
+  app: $AWS_APP
+  env: $AWS_ENV
   bucket_name: elasticbeanstalk-us-east-2-467223906842
   bucket_path: docker-multi
   on:
