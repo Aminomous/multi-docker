@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      components: web
+  template:
+    metadata:
+      labels:
+        components: web
+    spec:
+      containers:
+        - name: client
+          image: poyori007/multi-client
+          ports:
+            - containerPort: 3000
